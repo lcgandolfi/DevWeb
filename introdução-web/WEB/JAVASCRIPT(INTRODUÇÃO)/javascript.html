@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mark{
+            background-color: black;
+        }
+    </style>
+</head>
+<body class="mark">
+
+    <h1 id="ola"></h1>
+    <p onclick="clicar()">Já se libertou da <strong>MALDIÇÃO</strong>?</p>
+
+    <script>
+        //window.alert("Minha primeira mensagem")
+        //window.confirm("Está gostando?")
+        var nome = window.prompt("Qual é o seu nome: ")
+        var h1 = window.document.getElementById('ola')
+        h1.innerText = "Olá " + nome
+        //window.alert("é um prazer te conhecer "+nome)
+
+        //let n = window.prompt("Digite um número: ")
+        //let n2 = window.prompt("Digite um número: ")
+        //var soma = Number.parseInt(n) + Number.parseInt(n2)
+        //window.alert("A soma dos 2 numeros: " + soma)
+
+        var body = window.document.body
+        //body.style.background = 'black'
+        body.style.color = 'white'
+        //var p1 = window.document.getElementsByTagName('p')[0]
+        //p1.style.color = 'red'
+        //document.write(p1.innerText)
+        
+        var p1 = window.document.getElementsByTagName('p')[0]
+
+        function clicar(){
+            if(p1.style.color == 'green'){
+                p1.style.color = 'red'
+                p1.innerText =  p1.innerText + "\n Não"
+            } else {
+                p1.style.color = 'green'
+                p1.innerText = p1.innerText + "\n Sim"
+            }
+                   
+        }
+
+
+    </script>
+</body>
+</html>
